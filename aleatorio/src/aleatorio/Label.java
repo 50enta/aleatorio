@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 public class Label extends JLabel {
 
     private int numero;
-    private boolean verdade = true;
+    private boolean estado = true;
     private String caminho = "not01.png";
 
     public Label(String caminho, int num) {
@@ -28,10 +28,9 @@ public class Label extends JLabel {
         this.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                if (isVerdade()) {
+                if (isEstado()) {
                     addImagem("not01.png");
                 } else {
-
                     addImagem("done01.png");
                 }
             }
@@ -52,12 +51,12 @@ public class Label extends JLabel {
         this.numero = numero;
     }
 
-    public boolean isVerdade() {
+    public boolean isEstado() {
         return !caminho.equalsIgnoreCase("not01.png");
     }
 
-    public void setVerdade(boolean verdade) {
-        this.verdade = verdade;
+    public void setEstado(boolean estado) {
+        this.estado = estado;
     }
 
     public String getCaminho() {
@@ -66,9 +65,9 @@ public class Label extends JLabel {
 
     public void setCaminho(String caminho) {
         if (caminho.equalsIgnoreCase("not01.png")) {
-            this.setVerdade(false);
+            this.setEstado(false);
         } else {
-            this.setVerdade(true);
+            this.setEstado(true);
         }
         this.caminho = caminho;
 

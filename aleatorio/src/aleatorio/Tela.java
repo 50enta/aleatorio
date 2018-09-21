@@ -174,7 +174,7 @@ public class Tela extends javax.swing.JFrame {
 
     private void lblOkMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblOkMouseClicked
         // TODO add your handling code here:
-        this.aoclicar();
+        this.aoClicar();
     }//GEN-LAST:event_lblOkMouseClicked
 
     private void jspnValMaxStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jspnValMaxStateChanged
@@ -195,7 +195,7 @@ public class Tela extends javax.swing.JFrame {
 //        lblOk.setForeground(Color.black);
     }//GEN-LAST:event_lblOkMouseExited
 
-    public void aoclicar() {
+    public void aoClicar() {
         int max = (int) jspnValMax.getValue();
 
         if (max <= 0 || max >= 20) {
@@ -229,7 +229,7 @@ public class Tela extends javax.swing.JFrame {
     public ArrayList<Integer> calcularRestricoes() {
         ArrayList<Integer> nums = new ArrayList<>();
         for (Label a : this.labels) {
-            if (a.isVerdade()) {
+            if (a.isEstado()) {
                 nums.add(a.getNumero());
             }
         }
