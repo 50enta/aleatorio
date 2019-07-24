@@ -1,2 +1,2 @@
-# aleatorio
-App para seleccionar aleatoriamente um numero dado um conjunto e restricoes
+# Aleatorio
+App para selecionar aleatoriamente um número dado um conjunto e restrições
